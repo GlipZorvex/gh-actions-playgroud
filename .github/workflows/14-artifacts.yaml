@@ -40,7 +40,8 @@ jobs:
         with:
           name: app
           path: 14-artifacts/react-app/build
-  debploy:
+  debloy:
+    needs: test-build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
